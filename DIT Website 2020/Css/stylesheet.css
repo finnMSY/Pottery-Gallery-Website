@@ -1,0 +1,1857 @@
+@import url('https://fonts.googleapis.com/css?family=Tahoma&display=swap');
+
+[type="checkbox"], label {
+    display: none;
+}
+
+@media screen and (hover: none) and (pointer: coarse){ 
+  .navigation_box {
+      display: none;
+      top: 70px;
+      list-style:none;
+      width:100px;
+      height:50vw;
+      position: relative;
+      left: 68.9vw;
+  }
+
+  .navigation_box li a {
+      width: 300px;
+      left: 0px;
+      position: relative;
+      background-color:#666666;
+  }
+
+  .dropdown {
+    background-color:#666666;
+    position: relative;
+    right: 150px;
+    width: ;
+  }
+
+  .dropdown-content {
+    background-color: white;
+  }
+
+  .container1 {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 60px;
+    height: 5px;
+    background-color: white;
+    margin: 20px 0;
+    position: relative;
+    transition: 0.4s;
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .change .bar2 {opacity: 0;}
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-29px, -26px);
+  }
+
+  label {
+      display: block;
+      width: 90px;
+      height: 40px;
+      cursor: pointer;
+      position: absolute;
+      right: 0px;
+      top: -8px;
+  }
+
+  label:after {
+      content: '';
+      display: block;
+      width: 90px;
+      position: relative;
+      bottom: 11px;
+      font-size: 30px;
+      margin: 7px 5px;
+  }
+  [type="checkbox"]:checked ~ .navigation_box {
+      display: block;
+      z-index: 9999;
+      position: absolute;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navigation_box {
+      display: none;
+      top: 70px;
+      list-style:none;
+      width:200px;
+      height:50vw;
+      position: relative;
+      left: 73.9vw;
+  }
+
+  .navigation_box li, .navigation_box div {
+      width:200px;
+      position: relative;
+      background-color:#666666;
+  }
+
+  .dropdown-content {
+    background-color: white;
+  }
+
+  .dropdown {
+    top: 0px;
+  }
+
+  .container1 {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .change .bar2 {opacity: 0;}
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+  label {
+      display: block;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: -8px;
+  }
+
+  label:after {
+      content: '';
+      display: block;
+      width: 30px;
+      position: relative;
+      bottom: 11px;
+      font-size: 30px;
+      margin: 7px 5px;
+  }
+  [type="checkbox"]:checked ~ .navigation_box {
+      display: block;
+      z-index: 9999;
+      position: absolute;
+  }
+}
+
+* {
+	margin: 0px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: 'Tahoma';
+}
+
+/*NAVIGATION CSS STARTS*/
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+h3, h2 {
+  font-weight: normal;
+}
+
+li{
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 14px;
+  font-family: Tahoma;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+  opacity: 0.8;
+}
+
+#page_container {
+  width: 100%;
+}
+
+#logo {
+  height:; 83;
+}
+
+@media screen and (min-width: 768px) {
+
+  .topnav-centered1 a {
+    float: none;
+    position: absolute;
+    top: 22.4px;
+    left: 65%;
+    transform: translate(-50%, -50%);
+  }
+
+  .topnav-centered2 a {
+    float: none;
+    position: absolute;
+    top: 22.4px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .topnav-centered3 a {
+    float: none;
+    position: absolute; 
+    top: 22.4px;
+    left: 35%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* The dropdown container */
+.dropdown {
+  overflow: hidden;
+  width: inherit;
+}
+
+.left_nav {
+  top: 0px;
+}
+/* Dropdown button */
+.dropdown .dropbtn {
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  background-color: inherit;
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+   background-color: #111;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 89px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  width: 10%;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  font-size: 12px; 
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 5; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 25px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Set a style for all buttons */
+.navbutton {
+  background-color: #2B3E29;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.navbutton:hover {
+  opacity: 0.8;
+}
+
+span.psw {
+  float: right;
+  padding-top: 12px;
+}
+
+span.psw1 {
+  padding-top: 16px;
+  position: relative;
+  float: right;
+}
+
+.error {
+  background-color: #B80E0B;
+  margin-bottom: 5px;
+}
+
+.error p {
+  padding: 5px;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+}
+
+#nav-container {
+  width: 85%;
+  margin: auto;
+}
+
+.signup-button {
+  background-color: #2B3E39;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 168px;
+  width: 140px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 2;
+}
+
+/* The popup form - hidden by default */
+.form-popup1 {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #2B3E29;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: #A11919;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover, .signup-button:hover {
+  opacity: 1;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #A11919;
+}
+
+/* Center the image and position the close button */
+
+.container {
+  padding: 16px;
+}
+
+.is-active {
+  animation-name: animate;
+  animation-duration: .8s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(28);
+  animation-fill-mode: forwards;
+}
+ 
+@keyframes animate {
+  0%   { background-position: left;  }
+  50%  { background-position: right; }
+  100% { background-position: right; }
+}
+
+.container {
+  
+}
+
+/*NAVIGATION CSS ENDS*/
+
+/*----------------------------------------------------------*/
+
+/*INDEX PAGE CSS START*/
+
+#title{
+  color: white;
+  text-transform: uppercase;
+  position: absolute;
+  position: flex;
+  letter-spacing: 20px;
+  top: 38%;
+  left: 28vw;
+  font-size: 5.5vw;
+  z-index: 1;
+}
+
+.buttons {
+  background-color: #2B4E29;
+  width: 175px;
+  height: 45px;
+  border-radius: 30px;
+  position: absolute;
+  top: 55%;
+  left: calc(50% - 5em);
+}
+
+.buttons a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  left: 15%;
+  top: 8px;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: Tahoma;
+}
+
+.buttons:hover {
+  background-color: #2B3E29;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+}
+
+.bottomMenu {
+  z-index: 1;
+  transition: all 3s;
+}
+
+.indexheader {
+  font-size: 22px;
+  font-weight: normal;
+  position: relative;
+  font-family: Tahoma;
+  text-transform: uppercase; 
+  color: #2B4E29;
+  text-decoration: underline;
+  top: 75px;
+}
+
+.leftheader {
+  text-align: right;
+  padding-right: 80px;
+}
+
+.indextext {
+  font-size: 18px;
+  text-align: left;
+  position: relative;
+  font-family: Tahoma;
+  top: 90px;
+  left: 20%;
+}
+
+.imagebox {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    width: 540px;
+}
+
+.imagebox img {
+    max-width: 100%;
+    transition: all 0.3s;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+}
+
+.imagebox:hover img {
+    transform: scale(1.2);
+}
+
+.index_arrange {
+  width: 50%;
+  float: left;
+  height: 18vw;
+}
+
+.index_arrange img {
+  width: 100%;
+  height: 100%;
+}
+
+.index_arrange h2 {
+  padding-left: 80px;
+  padding-top: 12%;
+  font-size: 2vw;
+  font-weight: normal;
+  text-transform: uppercase; 
+  color: #2B4E29;
+  text-decoration: underline;
+}
+
+.index_arrange p {
+  padding-left: 80px; 
+  font-size: 1.5vw;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .index_arrange {
+    width: 100%;
+    float: left;
+  }
+  .index_arrange h2 {
+    padding-left: 0px;
+    text-align: center;
+    padding-top: 6%;
+    font-size: 15px;
+  }
+
+  .index_arrange p {
+    padding-left: 0px; 
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .leftheader {
+    padding-right: 0px;
+  }
+}
+
+@media only screen and (hover: none) and (pointer: coarse){
+  .index_arrange {
+    width: 100%;
+    height: 100%;
+    float: left;
+  }
+  .index_arrange h2 {
+    padding-left: 0px;
+    text-align: center;
+    padding-top: 15%;
+    font-size: 70px;
+  }
+
+  .index_arrange p {
+    padding-left: 0px; 
+    text-align: center;
+    font-size: 50px;
+    padding-bottom: 15%;
+  }
+
+  .leftheader {
+    padding-right: 0px;
+  }
+
+  #title{ 
+    font-size: 100px;
+    text-align: center;
+    left: 7%;
+  }
+
+  .buttons {
+    width: 240px;
+    height: 80px;
+    top: 50%;
+    left: calc(50% - 6em);
+  }
+
+  .buttons a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    left: 17%;
+    top: 20px;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-family: Tahoma;
+  }
+
+  li a {
+    font-size: 50px;
+  }
+}
+
+
+/*INDEX PAGE CSS ENDS*/
+
+/*----------------------------------------------------------*/
+
+/*CONTACT PAGE CSS START*/
+
+.contactform_grid_wrapper {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: auto auto;
+  grid-template-areas: "contactform_box_1 contactform_box_1"
+                       "contactform_box_2 contactform_box_3"
+                       "contactform_box_4 contactform_box_4"
+                       "contactform_box_5 contactform_box_5";
+  grid-gap: 0.5vw;
+  text-align: center;
+  width: 75%;
+  margin: auto; 
+  margin-top: 20px; 
+  font-size: 1.3vw;
+}
+
+.contactform_grid_wrapper input, textarea{
+  text-align: center;
+  font-size: 1.3vw;
+}
+
+.contactform_box_1 {
+  grid-area: contactform_box_1;
+  padding: 1.2vw 2vw;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contactform_box_2 {
+  grid-area: contactform_box_2;
+}
+
+.contactform_box_3 {
+  grid-area: contactform_box_3;
+}
+
+.contactform_box_3 input {
+  margin-top: 8px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.contactform_box_3 input::-webkit-outer-spin-button,
+.contactform_box_3 input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.contactform_box_4 {
+  grid-area: contactform_box_4;
+}
+
+.contactform_box_5{
+  grid-area: contactform_box_5;
+  margin-top: 5px;
+}
+
+.contactform_box_5 button, .collect_grid_box button {
+  padding: 5px;
+  width: 30%;
+  height: 30px;
+  margin: auto;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2vw;
+  background-color: #EFEFEF;
+
+}
+
+.contact_grid_wrapper {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto;
+  grid-template-areas: "contact_message"
+                       "contact_form";
+  width: 85%;
+  margin: auto;
+  grid-gap: 2vw;
+  margin-bottom: 50px; 
+}
+
+.contact_message {
+  grid-area: contact_message;
+  background-color: #2B3E29;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+.contact_message u:hover {
+  opacity: 60%;
+  cursor: pointer;
+}
+
+.contact_message h2 {
+  color: white;
+  width: 70%;
+  text-transform: uppercase;
+  letter-spacing: 0.2vw;
+  line-height: 2vw;
+  font-size: 1vw;
+  opacity: 85%;
+  margin: auto;
+  padding: 2vw;
+  text-align: center;
+  font-weight: normal;
+}
+
+.contact_message p {
+  color: white;
+  width: 90%;
+  letter-spacing: 0.1vw;
+  line-height: 1.7vw;
+  font-size: 1.3vw;
+  margin: auto;
+  padding: 2vw;
+  text-align: center;
+}
+
+.contact_form {
+  grid-area: contact_form;
+}
+
+#contactpage {
+  background-image: url(../Images/cup.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
+}
+
+/*CONTACT PAGE CSS ENDS*/
+
+/*----------------------------------------------------------*/
+
+/*STORE PAGE CSS START*/
+
+.product_edit_grid {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "product_edit_header product_edit_header"
+                       "product_edit_name product_edit_text"
+                       "product_edit_price product_edit_image"
+                       "product_edit_quantity product_edit_category"
+                       "product_edit_submit product_edit_submit";
+}
+
+.product_edit_grid h2 {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #2B4E29;
+}
+
+.product_edit_grid button {
+ height: 30px;
+ border: none;
+ border-radius: 4px;
+}
+
+.product_edit_grid div {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.product_edit_grid input, .product_edit_grid select {
+  width: 100%;
+  height: 48px;
+}
+
+.product_edit_grid input[type=number], .product_edit_grid input[type=file], .indexpage input[type=file] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.indexpage input[type=file] {
+  position: relative;
+  top: 8px;
+  height: 42px; 
+}
+
+.storeedit_table input {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  text-align: left;
+}
+
+.storeedit_table button {
+  height: 50px;
+}
+
+.product_edit {
+  width: 50%;
+  height: 360px;
+  position: fixed;
+  right: 50vh;
+  bottom: 21vh;
+  z-index: 3;
+  background-color: white;
+}
+
+.page_button {
+  border-radius: 4px;
+  border: none;
+  height: 100%;
+  padding: 10px;
+  font-size: 12px;
+  font-family: 'Tahoma';
+  cursor: pointer;
+}
+
+.store_filter {
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  border-bottom: 1px solid #E1E8EE;
+  border-top:  1px solid #E1E8EE;
+  padding-top: 15px;
+  padding-bottom: 15px; 
+}
+
+.filter {
+  width: calc(100vw / 8);
+  height: 45px; 
+  display: flex;
+  float: left;
+  margin-left: calc(100vw / 32);
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.IMAGEcontainer {
+  position: relative;
+}
+
+.IMAGEcontainer img {
+  height: 11.9vw;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  opacity: 50%;
+  background-color: black;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.IMAGEcontainer:hover .overlay {
+  height: 11.9vw;
+}
+
+.storecube {
+  text-align: center;
+  width: calc(100% / 3);
+  overflow: hidden;
+  float: left;
+  margin-top: 30px;
+}
+
+.storeinner h3 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: normal;
+
+}
+
+.storeinner button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 70%;
+  height: 30px;
+  background-color: #2B4E29;
+  color: white;
+  border: none;
+  float: left;
+}
+
+.storeinner input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 30%;
+  height: 30px;
+  text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1
+}
+
+.storeinner button:hover {
+  background-color: #2B2E29;
+  border: inset;
+  border-color: #2B3E29;
+}
+
+.storeinner {
+  background-color: white;
+  border-bottom:  1px solid #E1E8EE;
+  border-top:  1px solid #E1E8EE;
+  width: 50%;
+  margin: auto;
+  padding: 5px;
+}
+
+/*STORE PAGE CSS ENDS*/
+
+/*----------------------------------------------------------*/
+
+/*CART PAGE CSS START*/
+
+.emptycart {
+  text-align: center; 
+  margin-top: 50px; 
+  font-size: 13px;
+  font-family: 'Tahoma';
+  font-style: italic;
+}
+
+.total_price {
+  margin-top: 50px; 
+  padding-top: 15px;
+  padding-bottom: 15px; 
+  border-top:  1px solid #E1E8EE;
+  text-align: center;
+}
+
+.total_price_header {
+  font-weight: normal;
+  font-family: 'Tahoma';
+  padding-bottom: 15px;
+}
+
+.total_price_button {
+  background-color: #2B4E29;
+  margin: auto;
+  width: 15%;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.total_price_button:hover {
+  background-color: rgb(43,95,41);
+}
+
+.total_price_button a {
+  font-family: 'Tahoma';
+  font-size: 13px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+.total_price_text {
+  font-family: 'Tahoma';
+  padding-top: 15px;
+  margin: auto;
+  width: 40%;
+  border-top:  1px solid #E1E8EE;
+  line-height: 240%;
+  padding-bottom: 15px;
+}
+
+.deletebtn {
+  width: 200%;
+  height: 30px;
+  position: relative;
+  bottom: 2px;
+  background-color: #E1E8EE;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+.deletebtn img {
+  position: relative;
+  right: 0px;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.item {
+  padding: 20px 30px;
+  height: 120px;
+  display: flex;
+  width: 625px;
+  border-bottom:  1px solid #E1E8EE;
+  justify-content: center;
+  margin: auto;
+}
+
+.buttons1 {
+  position: relative;
+  padding-top: 30px;
+  margin-right: 60px;
+}
+
+.delete-btn,
+.like-btn {
+  display: inline-block;
+  Cursor: pointer;
+}
+.delete-btn {
+  width: 18px;
+  height: 17px;
+  background: url(&quot;delete-icn.svg&quot;) no-repeat center;
+}
+ 
+.description {
+  padding-top: 33px;
+  margin-right: 40px;
+  width: 50px;
+  word-wrap: break-word;
+}
+ 
+.description span {
+  display: block;
+  font-size: 14px;
+  color: #43484D;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.quantity {
+  padding-top: 20px;
+  margin-right: 40px;
+}
+ 
+.but[class*=btn] {
+  width: 30px;
+  height: 30px;
+  background-color: #E1E8EE;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.minus-btn h2 {
+  position: relative;
+  top: -12px;
+  right: 3px;
+}
+
+.plus-btn h2 {
+  position: relative;
+  top: -12px;
+  right: 7px;
+}
+
+.minus-btn h2 {
+  bottom: 11px;
+}
+
+.minus-btn {
+  position: relative;
+  float: left;
+}
+
+.plus-btn {
+  position: relative;
+  float: left;
+}
+
+.quantitybar {
+  width: 40px;
+  position: relative;
+  float: left;
+  bottom: 5px;
+  margin-left: 7px;
+  margin-right: 7px;
+} 
+
+.quantitybar input {
+  text-align: center;
+}
+
+.total-price {
+  width: 83px;
+  padding-top: 32px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.image {
+  margin-right: 40px;
+}
+
+/*CART PAGE CSS ENDS*/
+
+/*----------------------------------------------------------*/
+
+/*CHECKOUT PAGE CSS START*/
+
+.confirm_button {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 5px;
+  background-color: #EFEFEF;
+  text-transform: uppercase;
+  font-size: 12px;
+  cursor: pointer;
+  position: relative;
+  bottom: 1px;
+  border: none;
+  float: left;
+}
+
+.confirm_grid {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-areas: "confirm_grid_contact confirm_grid_contact confirm_grid_contact confirm_grid_contact confirm_grid_contact confirm_grid_contact"
+                       "confirm_grid_1 confirm_grid_1 confirm_grid_2 confirm_grid_2 confirm_grid_3 confirm_grid_3"
+                       "confirm_grid_address confirm_grid_address confirm_grid_address confirm_grid_address confirm_grid_address confirm_grid_address"
+                       "confirm_grid_4 confirm_grid_4 confirm_grid_4 confirm_grid_5 confirm_grid_5 confirm_grid_5"
+                       "confirm_grid_6 confirm_grid_6 confirm_grid_6 confirm_grid_7 confirm_grid_7 confirm_grid_7";
+  grid-gap: 15px;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.loginerror {
+  background-color: #B80E0B;
+  color: white;
+  padding: 5px;
+  font-size: 10px;
+}
+
+.collect_grid_box {
+  margin: 5px;
+}
+
+.checkoutgrid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ grid-template-rows: auto auto;
+ grid-template-areas: "topbox topbox"
+                      "leftbox rightbox";
+}
+
+.checkoutcollection_grid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "topbox"
+                       "centerbox";
+}
+
+.centerbox {
+  grid-area: centerbox;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas: "name name"
+                       "phone email"
+                       "address1 address2"
+                       "town country"
+                       "submit submit";
+ width: 60%;
+ margin: auto;
+}
+
+.topbox {
+  grid-area: topbox;
+  text-align: center;
+  padding: 50px 0px 50px 0px; 
+  border-bottom: 1px solid #E1E8EE;
+  margin-bottom: 20px;
+}
+
+.nextbutton a {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #EFEFEF;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-size: 12px;
+  font-family: 'Tahoma';
+  cursor: pointer;
+}
+
+.nextbutton1 a {
+  padding: 20px;
+  background-color: #EFEFEF;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.leftbox {
+  grid-area: leftbox;
+  text-align: center;
+  padding: 100px;
+  padding-top: 50px;
+  border-right: 1px solid #E1E8EE;
+}
+
+.leftbox2 {
+  grid-area: leftbox;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 14%;
+  border-right: 1px solid #E1E8EE;
+}
+
+.leftbox h2 {
+  text-decoration: underline;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+
+.rightbox {
+  grid-area: rightbox;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.rightbox h2 {
+  text-decoration: underline;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+
+.rightbox p {
+  padding-bottom: 20px;
+  font-size: 14px;
+}
+
+.checkoutbutton {
+  width: 30%;
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #E1E8EE;
+  border-radius: 4px;
+}
+
+.checkoutaccount input {
+  height: 50px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #E1E8EE;
+  font-family: 'Tahoma';
+}
+
+.leftbox button {
+  height: 40px;
+  width: 100%;
+  border-radius: 4px;
+  margin-top: 7px;
+  margin-bottom: 5.5%;
+  border: 1px solid #E1E8EE;
+}
+
+.checkoutheader {
+  font-size: 45px; 
+  text-transform: uppercase;
+  color: #2B4E29;
+  font-weight: normal;
+}
+
+.checkoutaccount h2 {
+  padding-bottom: 20px;
+  font-family: 'Tahoma';
+  float: left;
+  font-size: 20px; 
+  text-decoration: underline;
+  color: #2B4E29;
+}
+
+.checkoutguest {
+  width: 50%;
+  float: left;
+  text-align: center;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 110px;
+}
+
+.checkoutguest button {
+  height: 50px;
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  border: 1px solid #E1E8EE; 
+  font-family: 'Tahoma';
+}
+
+.collect_grid_box input {
+  margin: 0;
+}
+
+/*CHECKOUT PAGE CSS ENDS*/
+
+/*----------------------------------------------------------*/
+
+/*ABOUT PAGE CSS START*/
+
+.about p {
+  top: 65px;
+  font-size: 16px;
+}
+
+.about h2 {
+  top: 45px;
+}
+
+.indextext1 {
+  font-size: 18px;
+  text-align: right;
+  position: relative;
+  font-family: Tahoma;
+  top: 90px;
+  right: 20%;
+}
+
+/*ABOUT PAGE CSS ENDS*/
+
+/*----------------------------------------------------------*/
+
+/*ADMIN PAGE CSS START*/
+
+.adminbutton {
+  background-color: #5C5757;
+  height: 44px;
+  text-align: center;
+}
+
+.adminbutton:hover {
+  background-color: grey;
+  text-decoration: underline;
+}
+
+.adminbutton a {
+  margin: auto;
+  position: relative;
+  top: 0.8vw;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.newpagebutton {
+  float: right;
+  background-color: grey;
+  width: 10%;
+  height: 44px;
+  text-align: center;
+  padding-top: 13px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+}
+
+.newpagebutton:hover {
+  text-decoration: underline;
+  background-color: black;
+}
+
+.contact_search input {
+  width: 80%;
+  height: 30px;
+  padding: 5px;
+}
+
+.store_input {
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  border: 1px solid #E1E8EE
+}
+
+.contact_search button {
+  width: 20%;
+  height: 30px;
+}
+
+.contact_search {
+  height: 35px;
+}
+
+.contact-area button {
+  position: relative;
+  float: right;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: 'Tahoma';
+}
+
+.contactreviews {
+  position: fixed; /* Stay in place */
+  z-index: 5; /* Sit on top */
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100vh;
+  background-color: black;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+.contactreviews div {
+  width: 50vw;
+  word-break: break-all;
+  position: relative;
+  top: 22vh;
+  margin: auto;
+  overflow-wrap: break-word;
+}
+
+.contactreviews tr {
+  background-color: white;
+}
+
+td {
+  font-size: 20px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #5C5757;
+  color: white;
+  width: 20%;
+  font-size: 20px;
+}
+
+.AdminNav {
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-image: url(../Images/mainimage.png);
+    overflow: hidden;
+}
+
+.AdminHeader {
+  text-align: center;
+  position: relative;
+  bottom: 140px;
+  font-size: 400%;
+  text-transform: uppercase;
+  color: #5C5757;
+  font-family: 'Tahoma';
+}
+
+/*ADMIN PAGE CSS ENDS*/
+
+/*----------------------------------------------------------*/
+
+/*@MEDIA CSS ENDS*/
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+/* Responsive navigation menu (for mobile devices) */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav-right {
+    float: none;
+    display: block;
+  }
+  
+  .topnav-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 600px) {
+  .col {
+    margin: 1% 0 1% 0%; 
+  }
+  .wrapper {
+    width: 90%;
+  }
+  .span_2_of_2, .span_1_of_2 {
+    width: 100%; 
+  }
+
+  .storecube {
+    width: calc(100% / 2);
+  }
+}
+
+/*  SECTIONS  */
+.section {
+  clear: both;
+  padding: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float:left;
+  margin: 0% 0 0% 0%;
+  position: relative;
+}
+
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+/*  GRID OF THREE  */
+.span_2_of_2 {
+  width: 100%;
+}
+.span_1_of_2 {
+  width: 50%;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.col-50 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+/*@MEDIA CSS ENDS*/
+
+/*----------------------------------------------------------*/
+
+/*ACCOUNT CSS STARTS*/
+
+.accountpopup {
+  background-color: red;
+  width: 20%;
+  margin: auto;
+  height: 200px;
+  position: relative;
+  top: 200px;
+  z-index: 2; 
+}
+
+.accounttitle {
+  letter-spacing: 5px;
+  font-size: 30px;
+  color: black;
+  text-align: center;
+}
+
+#titleaccount {
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  font-size: 5.5vw;
+  bottom: 16vw;
+  z-index: 1;
+  font-family: Tahoma;
+  color: white;
+}
+
+/*ACCOUNT CSS ENDS*/
+
+/*----------------------------------------------------------*/
+
+/* Style the container */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.indexpage {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: auto auto;
+  grid-template-areas: "pagename pagename"
+                       "title1 image1"
+                       "para1 para1"
+                       "title2 image2"
+                       "para2 para2"
+                       "title3 image3"
+                       "para3 para3"
+                       "submit_edit submit_edit";
+  grid-gap: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+a img {
+  margin-left: 5px;
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+}
+
+td div {
+  width: 100%;
+  text-align: left;
+  height: 30px;
+  border-bottom: 1px solid #E1E8EE;
+  border-top: 1px solid #E1E8EE;
+  margin-bottom: 7px;
+  margin-top: 7px;
+  font-size: 15px;
+  padding-top: 5px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+nav .col {
+	height: 83px;
+	padding-top: 35px;
+}
+
+header {
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th a {
+	color: blue;
+}
+
+footer {
+	background-color: #2A2A2A;
+	height: 100px;
+}
+
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+select {
+  border-radius: 0px;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.ordersuc{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 50px;  
+  margin-top: 80px;
+  color: #2B3E29;
+  font-weight: normal;
+  margin-bottom: 50px;
+}
+
+.ordersuc_div {
+  background-color: #2B3E29;
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.ordersuc_div p {
+  color: white;
+  width: 90%;
+  text-transform: uppercase;
+  letter-spacing: 0.2vw;
+  line-height: 2vw;
+  font-size: 1vw;
+  opacity: 85%;
+  margin: auto;
+  padding: 1vw;
+  text-align: center;
+  font-weight: normal;
+}
